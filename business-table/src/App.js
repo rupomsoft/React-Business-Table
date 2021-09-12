@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
-import BusinessTable from "./pages/BusinessTable";
+import BusinessTablePage from "./pages/BusinessTablePage";
 const App = () => {
     return (
         <Fragment>
-            <BusinessTable/>
+            <BusinessTablePage/>
         </Fragment>
     );
 };

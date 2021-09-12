@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+body{
+    background: #F5F5F5;
+}
+
+
+.grid-row-head{
+    padding: 10px;
+    background: #F5F5F5;
+    margin-bottom: 5px;
+}
+
+.grid-col-head{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-col-head-first{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+.grid-row{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #D4D4D4;
+}
+.grid-col-first{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    border-right: 1px solid #D4D4D4;
+    border-left: 1px solid #D4D4D4;
+}
+.grid-col{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    border-right: 1px solid #D4D4D4;
+}
+.grid-card{
+    padding-bottom: 30px;
+    padding-top: 20px;
+    border-bottom: 10px solid #217346;
+    box-shadow: 0 4px 8px rgba(36, 108, 31, 0.03);
+    margin-top: 40px;
+    z-index: 1000 ;
+    background: #ffffff;
+    border-radius: 4px;
+}
+.grid-div {
+    overflow: scroll;
+    scrollbar-color: #217346 #F5F5F5;
+    scrollbar-width: thin;
+
+}
+.grid-div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.grid-div::-webkit-scrollbar-track-piece  {
+    background-color: #F5F5F5;
+}
+.grid-div::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    border-radius: 4px;
+    background: #217346;
+}
+
+
+
+
+
+
+
+.btn {
+    border-radius: 3px !important;
+    cursor: pointer !important;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.btn:focus {
+    box-shadow: none;
+}
+.btn:hover {
+    box-shadow:  none;
+    cursor: pointer !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+.input-group-text{
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 3px !important;
+    background-color: #FDFDFF !important;
+    font-weight: 400 !important;
+}
+.form-control:focus {
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    border: 1px solid #217346 !important;
+
+}
+.form-select {
+    border-radius: 3px !important;
+    background-color: #FDFDFF !important;
+    font-weight: 400 !important;
+}
+.form-select:focus {
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    border: 1px solid #217346 !important;
+
+}
+.form-label {
+    font-size: 13px !important;
+    font-weight: 400;
+}
+
+
+.dropdown-item:hover{
+    background:#D4D4D4 !important;
+}
