@@ -4,7 +4,6 @@ import { FixedSizeList } from "react-window";
 import exportFromJSON from "export-from-json";
 import { RiFileExcel2Line } from "react-icons/ri";
 const BusinessTable = (props) => {
-  const [SearchKey1, SetSearchKey1] = useState("");
   const [ItemList, SetItemList] = useState(props.ItemList);
   const RowList = ({ index, style }) => (
     <Row className="grid-row" style={style}>
@@ -30,8 +29,8 @@ const BusinessTable = (props) => {
   );
   const SearchRow = (e) => {
     let rowNo = e.target.value;
-    if (parseInt(rowNo)) {
-      listRef.current.scrollToItem(parseInt(rowNo), "start");
+    if (parseInt(rowNo, 100)) {
+      listRef.current.scrollToItem(parseInt(rowNo, 100), "start");
     }
   };
   const SearchList = (e) => {
@@ -44,7 +43,6 @@ const BusinessTable = (props) => {
     } else {
       SetItemList(props.ItemList);
     }
-    SetSearchKey1(keyword);
   };
 
   const ExportXLXS = (data) => {
@@ -69,7 +67,7 @@ const BusinessTable = (props) => {
           <Col md={10} lg={10} className="grid-card">
             <Container className="my-3" fluid={true}>
               <Row>
-                <Col md={3} lg={3}>
+                <Col md={3} lg={3} sm={3} xs={6}>
                   <input
                     placeholder="Search.."
                     className="form-control"
@@ -77,7 +75,7 @@ const BusinessTable = (props) => {
                     type="text"
                   />
                 </Col>
-                <Col md={2} lg={2}>
+                <Col md={2} lg={2} sm={3} xs={6}>
                   <input
                     onChange={SearchRow}
                     placeholder="Row No"
@@ -85,7 +83,7 @@ const BusinessTable = (props) => {
                     type="text"
                   />
                 </Col>
-                <Col md={2} lg={2}>
+                <Col md={2} lg={2} sm={3} xs={6}>
                   <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                       <RiFileExcel2Line /> Excel Export
@@ -101,7 +99,6 @@ const BusinessTable = (props) => {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Col>
-                <Col md={2} lg={2}></Col>
               </Row>
             </Container>
 
