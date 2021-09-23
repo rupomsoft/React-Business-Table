@@ -7,14 +7,14 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.4",
-    "bootstrap": "^5.1.0",
-    "export-from-json": "^1.4.0",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.0.0-beta.6",
-    "react-bootstrap-sweetalert": "^5.2.0",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
+    "axios": "0.21.4",
+    "bootstrap": "5.1.1",
+    "export-from-json": "1.4.0",
+    "react": "17.0.2",
+    "react-bootstrap": "1.6.3",
+    "react-bootstrap-sweetalert": "5.2.0",
+    "react-dom": "17.0.2",
+    "react-icons": "4.2.0",
     "react-json-csv": "^2.0.0",
     "react-json-to-csv": "^1.0.4",
     "react-router-dom": "^5.2.1",
@@ -29,17 +29,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
