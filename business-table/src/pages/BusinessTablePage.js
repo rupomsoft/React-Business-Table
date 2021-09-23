@@ -7,7 +7,7 @@ const BusinessTablePage = () => {
 
     const [ItemList,SetItemList]=useState([])
     useEffect(()=>{
-        axios.get("https://restcountries.eu/rest/v2/all")
+        axios.get("https://jsonplaceholder.typicode.com/todos")
             .then((res)=>{
                 SetItemList(res.data)
             })
