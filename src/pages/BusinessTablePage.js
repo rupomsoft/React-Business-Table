@@ -5,7 +5,7 @@ import BusinessTable from "../components/BusinessTable";
 const BusinessTablePage = () => {
   const [ItemList, SetItemList] = useState([]);
   useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/todos").then((res) => {
+    axios.get("https://myjson.dit.upm.es/api/bins/l2v").then((res) => {
       SetItemList(res.data);
     });
   }, []);

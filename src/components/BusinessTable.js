@@ -7,23 +7,23 @@ const BusinessTable = (props) => {
   const [ItemList, SetItemList] = useState(props.ItemList);
   const RowList = ({ index, style }) => (
     <Row className="grid-row" style={style}>
-      <Col className="grid-col-first" md={2} lg={2}>
+      <Col className="grid-col-first" md={1} lg={1}>
         {index}
       </Col>
       <Col className="grid-col " md={2} lg={2}>
-        {ItemList[index].title.split(" ")[0]}
+        {ItemList[index].first_name}
       </Col>
       <Col className="grid-col" md={2} lg={2}>
-        {ItemList[index].title.split(" ")[0]}
+        {ItemList[index].last_name}
+      </Col>
+      <Col className="grid-col" md={3} lg={3}>
+        {ItemList[index].email}
       </Col>
       <Col className="grid-col" md={2} lg={2}>
-        {ItemList[index].userId}
-      </Col>
-      <Col className="grid-col" md={2} lg={2}>
-        {ItemList[index].id}
+        {ItemList[index].country}
       </Col>
       <Col className="grid-col " md={2} lg={2}>
-        {ItemList[index].title.split(" ")[0]}
+        {ItemList[index].modified}
       </Col>
     </Row>
   );
@@ -37,7 +37,9 @@ const BusinessTable = (props) => {
     let keyword = e.target.value;
     if (keyword !== "") {
       const results = ItemList.filter((search) => {
-        return search.title.toLowerCase().startsWith(keyword.toLowerCase());
+        return search.first_name
+          .toLowerCase()
+          .startsWith(keyword.toLowerCase());
       });
       SetItemList(results);
     } else {
@@ -104,23 +106,23 @@ const BusinessTable = (props) => {
 
             <Container className="my-0" fluid={true}>
               <Row className="grid-row-head my-0 mx-0">
-                <Col className="grid-col-head-first" md={2} lg={2}>
+                <Col className="grid-col-head-first" md={1} lg={1}>
                   No
                 </Col>
                 <Col className="grid-col-head " md={2} lg={2}>
-                  Name
+                  First Name
                 </Col>
                 <Col className="grid-col-head" md={2} lg={2}>
-                  Name
+                  Last Name
+                </Col>
+                <Col className="grid-col-head" md={3} lg={3}>
+                  Email
                 </Col>
                 <Col className="grid-col-head" md={2} lg={2}>
-                  Name
+                  Country
                 </Col>
                 <Col className="grid-col-head" md={2} lg={2}>
-                  Name
-                </Col>
-                <Col className="grid-col-head" md={2} lg={2}>
-                  Name
+                  Update Date
                 </Col>
               </Row>
             </Container>
