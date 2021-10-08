@@ -68,10 +68,11 @@ const BusinessTable = (props) => {
         <Row className="d-flex justify-content-center">
           <Col md={10} lg={10} className="grid-card">
             <Container className="my-3" fluid={true}>
+              <h4>React Business Table Component</h4>
               <Row>
                 <Col md={3} lg={3} sm={3} xs={6}>
                   <input
-                    placeholder="Search.."
+                    placeholder="Search By First Name"
                     className="form-control"
                     onChange={SearchList}
                     type="text"
