@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import axios from "axios";
 import BusinessTable from "../component/BusinessTable";
-import {Container} from "react-bootstrap";
+
 
 const BusinessTablePage = () => {
 

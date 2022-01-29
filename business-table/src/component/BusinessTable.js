@@ -13,17 +13,28 @@ const BusinessTable = (props) => {
     const [ItemList,SetItemList]=useState(props.ItemList);
 
     const RowList = ({ index, style }) => (
-        <Row  className="grid-row" style={style}>
-            <Col className="grid-col-first" md={1} lg={1} >{index}</Col>
-            <Col className="grid-col " md={2} lg={2}>{ItemList[index].name.split(" ")[0]}</Col>
-            <Col className="grid-col" md={2} lg={2}>{ItemList[index].capital}</Col>
-            <Col className="grid-col" md={2} lg={2}>{ItemList[index].region}</Col>
-            <Col className="grid-col" md={2} lg={2}>{ItemList[index].population}</Col>
-            <Col className="grid-col" md={2} lg={2}>{ItemList[index].area}</Col>
-            <Col className="grid-col" md={1} lg={1}><img className="w-75 h-auto" alt="img" src={ItemList[index].flag}/></Col>
+        <Row  className="grid-row justify-content-evenly" style={style}>
+            <Col className="grid-col-first" xs={1} sm={1} md={1} lg={1} >{index}</Col>
+            <Col className="grid-col " xs={2} sm={2} md={2} lg={2}>{ItemList[index].name.split(" ")[0]}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].capital}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].region}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].population}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].area}</Col>
+            <Col className="grid-col " xs={2} sm={2} md={1} lg={1}>{ItemList[index].name.split(" ")[0]}</Col>
         </Row>
     );
 
+    const RowList2 = ({ index, style }) => (
+        <tr  className="grid-row justify-content-evenly" style={style}>
+            <td className="grid-col-first" xs={1} sm={1} md={1} lg={1} >{index}</td>
+            <Col className="grid-col " xs={2} sm={2} md={2} lg={2}>{ItemList[index].name.split(" ")[0]}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].capital}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].region}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].population}</Col>
+            <Col className="grid-col" xs={2} sm={2} md={2} lg={2}>{ItemList[index].area}</Col>
+            <Col className="grid-col " xs={2} sm={2} md={1} lg={1}>{ItemList[index].name.split(" ")[0]}</Col>
+        </tr>
+    );
 
 
 
@@ -111,7 +122,7 @@ const BusinessTable = (props) => {
                             </Row>
                         </Container>
 
-                        <Container className="my-0"   fluid={true} >
+                        <Container className="my-0 table-responsive"   fluid={true} >
                             <FixedSizeList ref={listRef} {...props} className="grid-div" itemCount={ItemList.length} height={400} itemSize={35}  >
                                 {RowList}
                             </FixedSizeList>

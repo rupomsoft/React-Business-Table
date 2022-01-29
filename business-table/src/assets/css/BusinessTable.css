@@ -27,6 +27,7 @@ body{
 
 
 .grid-row{
+    width: 100%;
     margin: 0;
     padding: 0;
     border-bottom: 1px solid #D4D4D4;
